@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Problem Statement: Remove Consecutive Even Numbers from Array</p>
+    <h2 id="before">Before:-</h2>
+    <h2 id="output"></h2>
+    <script>
+        let input = [1,6,2,3,4,6,8,7,10,4,12,14,13,34];
+        document.getElementById('before').innerHTML=input
+        restartLoop:
+        while(true){
+        for(var i=0; i<input.length;i++){
+            if(input[i]%2 ==0 && input[i-1]%2 ==0){
+                input.splice(i, 1);
+                continue restartLoop;
+            }
+        } 
+        break;  
+    }
+        console.log(input)
+        document.getElementById('output').innerHTML=input
+    </script>
+</body>
+</html>
